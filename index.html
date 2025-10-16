@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <style>
+    /* --- GENERAL --- */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 40px 10px 20px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #fff8;
+      font-size: 1.1rem;
+    }
+
+    /* --- GALLERY --- */
+    .gallery {
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+    }
+
+    .gallery img {
+      width: 280px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* --- AUDIO PLAYER --- */
+    .audio-player {
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .audio-player h2 {
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    audio {
+      margin-top: 15px;
+      width: 90%;
+      border-radius: 20px;
+      outline: none;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+
+    /* --- MESSAGE CARD --- */
+    .message {
+      margin: 40px auto;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(12px);
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .message h2 {
+      color: #fff;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .message p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #fdfdfd;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px 10px;
+      margin-top: 50px;
+      border-top: 2px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px 18px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      background: #fff;
+      color: #ff4081;
+      transform: translateY(-3px);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #fff9;
+    }
+
+    /* --- CONFETTI EFFECT --- */
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      background-color: hsl(calc(360 * var(--i) / 20), 80%, 60%);
+      animation: fall 5s linear infinite;
+      animation-delay: calc(-0.25s * var(--i));
+      opacity: 0.8;
+      border-radius: 50%;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🎉 Happy Birthday! 🎂</h1>
+    <p>Wishing you laughter, love, and endless joy on your special day!</p>
+  </header>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800" alt="Birthday 1">
+    <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=800" alt="Birthday 2">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800" alt="Birthday 3">
+  </div>
+
+  <div class="audio-player">
+    <h2>🎵 Let's Celebrate!</h2>
+    <audio controls autoplay loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="message">
+    <h2>💌 A Special Message for You</h2>
+    <p>
+      May your day be filled with sunshine, smiles, and sweet surprises!  
+      Wishing you a year ahead full of success, happiness, and memories that sparkle forever. ✨
+    </p>
+  </div>
+
+  <footer>
+    <h3>Connect with me 🌐</h3>
+    <div class="socials">
+      <a href="https://instagram.com/_rajaaaaa_0" target="_blank">Instagram</a>
+      <a href="https://facebook.com/RajaRdas.TheKing" target="_blank">Facebook</a>
+      <a href="https://t.me/Sorry_my_jaan" target="_blank">Telegram</a>
+    </div>
+    <p>Made with ❤️ by You</p>
+  </footer>
+
+  <!-- Confetti Animation -->
+  <script>
+    for (let i = 0; i < 25; i++) {
+      const conf = document.createElement('div');
+      conf.classList.add('confetti');
+      conf.style.setProperty('--i', i);
+      conf.style.left = Math.random() * 100 + 'vw';
+      conf.style.animationDuration = 3 + Math.random() * 3 + 's';
+      document.body.appendChild(conf);
+    }
+  </script>
+</body>
+</html>
